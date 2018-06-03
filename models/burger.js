@@ -1,6 +1,7 @@
 var orm = require('../config/orm.js');
 
 var burger = {
+
     validateName: function(burger_name) {
         const regex = new RegExp('^[a-zA-Z]+$')
         return regex.test(burger_name);

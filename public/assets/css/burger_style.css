@@ -1,15 +1,55 @@
 body{
-    /* background: url("../images/484774832.jpg") no-repeat;
-    background-size: cover, contain; */
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom right, rgb(135, 223, 223) , rgb(233, 233, 138))no-repeat center fixed;
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+h1{
+    font-family: 'Tangerine', serif;
+    text-shadow: 4px 4px 4px #aaa;
+}
+h5{
+    text-shadow: 4px 4px 4px #aaa;
+    font-family: 'Roboto Mono';
+}
 .burger{
-    width: 300px;
-    height: 250px;
+    width: 250px;
+    height: 200px;
     background: url("../images/burger.png");
     background-size: cover;
     margin: 0 auto;
+    padding: 20px;
+}
+
+.burgerDiv{
+    background: rgb(135, 223, 223)no-repeat center fixed;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px rgb(49, 49, 49);
+    padding:10px;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    width: 60%;
+}
+#submit{
+    background-color: black;
+}
+#input{
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 5px; 
+    width: 300px;
+    resize: both;
+    overflow: auto;
+}
+#submit{
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px rgb(49, 49, 49);
+}
+
+.notEaten, eaten{
+    align-content: center;
+    margin-bottom: 5%;
 }
