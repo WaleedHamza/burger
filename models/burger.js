@@ -1,6 +1,10 @@
 var orm = require('../config/orm.js');
 
 var burger = {
+    validateName: function(burger_name) {
+        const regex = new RegExp('^[a-zA-Z]+$')
+        return regex.test(burger_name);
+      },
     all: (cb) => {
         orm.all("burgers", (res) => {
             cb(res);
@@ -13,10 +17,15 @@ var burger = {
         });
     },
 
-    update: (pbjColVals, condition, cb) => {
+    update: (objColVals, condition, cb) => {
         orm.update("burgers", objColVals, condition, (res) =>{
             cb(res)
         })
+    },
+    delete: function(condition, cb) {
+      orm.delete("burgers", 'id='+condition, function(res) {
+        cb(res);
+      });
     }
 };
 
