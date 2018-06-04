@@ -1,9 +1,9 @@
 $(function() {
     $(".devouredBtn").on("click", function(event) {
-        console.log('inside the devouredBtn /publick burger.js')
+        // console.log('inside the devouredBtn /public burger.js')
       var id = $(this).data("id");
       var newDevoured = $(this).data("devoured");
-      console.log(newDevoured)
+      // console.log(newDevoured)
       var newDevouredState = {
         devoured: !newDevoured
       };
@@ -14,7 +14,7 @@ $(function() {
         data: newDevouredState
       }).then(
         function() {
-          console.log("changed eaten to", newDevoured);
+          // console.log("changed eaten to", newDevoured);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -25,9 +25,12 @@ $(function() {
     $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
+      //Frontend Validation
         var burgerInput = $("#input").val().trim();
-        if (burgerInput == ""){
-          alert("Please input burger name");
+        // this var will take only letters and white spaces
+        var letters = /^[a-zA-Z ]+$/
+        if (burgerInput == "" || !burgerInput.match(letters) ){
+          alert("Please input burger name letters Only");
           return;
         }else{
           var newBurger = {
