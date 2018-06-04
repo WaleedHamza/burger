@@ -1,4 +1,4 @@
-# burger
+# Burger
 
 <img width="1440" alt="screen shot 2018-06-03 at 5 38 59 pm" src="https://user-images.githubusercontent.com/33872841/40891535-1e073c66-6755-11e8-8f90-31006e43a5f9.png">
 
